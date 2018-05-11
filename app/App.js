@@ -1,27 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 // Components
 import Board from "./components/board/Board";
+import SplashScreen from "./components/SplashScreen";
+
+// Assets
+import { styles } from "./appStyle";
 
 
 export default class App extends React.Component {
+	state = { loading: true };
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>It works!</Text>
-        <Board />
-      </View>
-    );
-  }
+	componentDidMount = () => {
+		setTimeout(() => {
+			this.setState(() => ({ loading: false }));
+		}, 2000);
+	}
+
+	render() {
+		if(!this.state.loading) {
+			return (
+				<View style={styles.container}>
+					<Board />
+				</View>
+			);
+		} else {
+			return <SplashScreen />
+		}
+	}
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
