@@ -1,13 +1,22 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-	container: {
+	stepContainer: {
+		flex: 1
+	},
+	step: {
+		backgroundColor: "#FFFFFF",
 		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-    },
-    text: {
-        color: "green"
-    }
+		alignItems: "center",
+		justifyContent: "space-between",
+		padding: 20
+	},
+	heading: {
+		color: "black",
+		fontSize: 23,
+		fontWeight: "bold"
+	},
+    text: { 
+        color: "#95989a"
+	},
 });

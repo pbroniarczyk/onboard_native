@@ -19,14 +19,7 @@ export default class App extends React.Component {
 	}
 
 	render() {
-		if(!this.state.loading) {
-			return (
-				<View style={styles.container}>
-					<Board />
-				</View>
-			);
-		} else {
-			return <SplashScreen />
-		}
+		if(!this.state.loading) return <Board />
+		else return <SplashScreen />
 	}
 }
