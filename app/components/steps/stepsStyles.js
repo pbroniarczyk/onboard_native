@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
 		justifyContent: "space-between",
 		padding: 20
 	},
-	heading: {
+	headline: {
 		color: "black",
 		fontSize: 23,
 		fontWeight: "bold"
@@ -19,4 +19,7 @@ export const styles = StyleSheet.create({
     text: { 
         color: "#95989a"
 	},
+	input: {
+		width: 100
+	}
 });
