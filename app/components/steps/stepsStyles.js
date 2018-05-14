@@ -11,6 +11,9 @@ export const styles = StyleSheet.create({
 		justifyContent: "space-between",
 		padding: 20
 	},
+	row: {
+		flexDirection: "row"
+	},
 	headline: {
 		color: "black",
 		fontSize: 23,
@@ -20,6 +23,6 @@ export const styles = StyleSheet.create({
         color: "#95989a"
 	},
 	input: {
-		width: 100
+		width: 300
 	}
 });
