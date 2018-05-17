@@ -5,5 +5,10 @@ export const styles = StyleSheet.create({
 		flexDirection: "row",
         justifyContent: "space-between",
         width: 200
-	},
+    },
+    checkbox: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center"
+    }
 })

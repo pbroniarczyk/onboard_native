@@ -25,14 +25,14 @@ export default class App extends React.Component {
 				},
 				work: {
 					type: {
-					employment: false,
-					contractWork: false,
-					contractComission: false,
-					b2b: false,
+						employment: false,
+						contractWork: false,
+						contractComission: false,
+						b2b: false,
 					},
 					place: {
-					stacionary: false,
-					remote: false
+						stacionary: false,
+						remote: false
 					},
 				},
 				paths: [],
@@ -60,6 +60,7 @@ export default class App extends React.Component {
 	}
 
 	render() {
+		console.log("USER === ", this.state.user);
         if(this.state.step !== 5) {
             return(
 				<StepsContainer

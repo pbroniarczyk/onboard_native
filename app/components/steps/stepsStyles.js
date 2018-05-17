@@ -24,5 +24,5 @@ export const styles = StyleSheet.create({
 	},
 	input: {
 		width: 300
-	}
+	},
 });
