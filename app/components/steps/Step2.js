@@ -13,22 +13,18 @@ export default class Step2 extends React.Component {
     state = {
         fadeAnim: new Animated.Value(0),
         salary: "",
-        work: {
-            type: {
-                employment: false,
-                contractWork: false,
-                contractComission: false,
-                b2b: false,
-            },
-            place: {
-                stacionary: false,
-                remote: false
-            },
-        },
+        employment: false,
+        contractWork: false,
+        contractComission: false,
+        b2b: false,
+        stacionary: false,
+        remote: false
     }
 
-    handleCheckbox = () => {
-        
+    handleCheckbox = (name) => {
+        this.setState((prevState) => ({
+            [name]: !prevState[name]
+        }))
     }
 
     componentDidMount = () => {
@@ -42,7 +38,20 @@ export default class Step2 extends React.Component {
     }
 
     componentWillUnmount = () => {
-        this.props.userProfileUpdate(this.state);
+        const work = {
+            type: {
+                employment: this.state.employment,
+                contractWork: this.state.contractWork,
+                contractComission: this.state.contractComission,
+                b2b: this.state.b2b,
+            },
+            place: {
+                stacionary: this.state.stacionary,
+                remote: this.state.remote
+            }
+        };
+
+        this.props.userProfileUpdate(work);
         Animated.timing(
             this.state.fadeAnim,
             {
@@ -66,15 +75,15 @@ export default class Step2 extends React.Component {
                 />
                 <View>
                     <Text>Forma zatrudnienia</Text>
-                    <Checkbox onChange={value => {this.setState((prevState) => ({work: {type: {employment: !prevState.employment}}}))}} label="Umowa o pracę" />
-                    <Checkbox onChange={value => {this.setState((prevState) => ({work: {type: {b2b: !prevState.b2b}}}))}} label="B2B" />
-                    <Checkbox onChange={value => {this.setState((prevState) => ({work: {type: {contractComission: !prevState.contractComission}}}))}} label="Umowa zlecenie" />
-                    <Checkbox onChange={value => {this.setState((prevState) => ({work: {type: {contractWork: !prevState.contractWork}}}))}} label="Umowa o dzieło" />
+                    <Checkbox label="Umowa o pracę" value={this.state.employment} onValueChange={this.handleCheckbox.bind(this, "employment")}/>
+                    <Checkbox label="B2B" value={this.state.b2b} onValueChange={this.handleCheckbox.bind(this, "b2b")}/>
+                    <Checkbox label="Umowa zlecnie" value={this.state.contractComission} onValueChange={this.handleCheckbox.bind(this, "contractComission")}/>
+                    <Checkbox label="Umowa o dzieło" value={this.state.contractWork} onValueChange={this.handleCheckbox.bind(this, "contractWork")}/>
                 </View>
                 <View>
                     <Text>Miejsce pracy</Text>
-                    <Checkbox onChange={value => {this.setState((prevState) => ({work: {place: {stationary: !prevState.stationary}}}))}} label="Stacjonarnie" />
-                    <Checkbox onChange={value => {this.setState((prevState) => ({work: {place: {remote: !prevState.remote}}}))}} label="Zdalnie" />
+                    <Checkbox label="Stacjonarnie" value={this.state.stationary} onValueChange={this.handleCheckbox.bind(this, "stationary")}/>
+                    <Checkbox label="Zdalnie" value={this.state.remote} onValueChange={this.handleCheckbox.bind(this, "remote")}/>
                 </View>
                 <ButtonWrapper 
                     nextStep={this.props.nextStep}

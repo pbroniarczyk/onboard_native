@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 17 18:32:24 CEST 2018
+#Sat May 19 09:02:29 CEST 2018
 17.baseType=DIRECTORY
 4.path=lib/armeabi-v7a/libreactnativejni.so
 25.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -14,7 +14,7 @@
 16.set=NATIVE_RESOURCE
 count=27
 6.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
-13.path=lib/x86/libjsc.so
+13.path=classes.dex
 6.baseType=DIRECTORY
 2.set=NATIVE_RESOURCE
 5.path=lib/x86/libimagepipeline.so
@@ -28,11 +28,11 @@ count=27
 20.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 10.set=NATIVE_RESOURCE
 10.baseType=DIRECTORY
-15.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/dexMerger/debug/50
+15.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 26.set=NATIVE_RESOURCE
 7.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
-14.path=lib/armeabi-v7a/libgnustl_shared.so
-15.set=DEX
+14.path=lib/x86/libjsc.so
+15.set=NATIVE_RESOURCE
 6.path=lib/x86_64/libimagepipeline.so
 23.baseType=DIRECTORY
 1.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -47,7 +47,7 @@ count=27
 20.path=lib/armeabi-v7a/libfolly_json.so
 16.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 8.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
-15.path=classes.dex
+15.path=lib/armeabi-v7a/libgnustl_shared.so
 14.baseType=DIRECTORY
 25.set=NATIVE_RESOURCE
 17.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -77,7 +77,7 @@ count=27
 3.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 10.path=lib/armeabi-v7a/libyoga.so
 20.baseType=DIRECTORY
-13.set=NATIVE_RESOURCE
+13.set=DEX
 2.path=lib/x86/libprivatedata.so
 9.baseType=DIRECTORY
 23.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -103,7 +103,7 @@ count=27
 0.baseType=DIRECTORY
 17.set=NATIVE_RESOURCE
 13.baseType=DIRECTORY
-13.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
+13.base=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/dexMerger/debug/67
 19.path=lib/x86/libglog_init.so
 15.baseType=DIRECTORY
 3.set=NATIVE_RESOURCE

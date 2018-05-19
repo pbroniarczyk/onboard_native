@@ -1,4 +1,4 @@
-#Thu May 17 18:32:23 CEST 2018
-base.0=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/dexMerger/debug/50
+#Sat May 19 09:02:28 CEST 2018
+base.0=/home/pawel/Projects/onboard_native/android/app/build/intermediates/transforms/dexMerger/debug/67
 path.0=classes.dex
 renamed.0=classes.dex
