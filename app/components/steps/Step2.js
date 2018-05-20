@@ -38,20 +38,22 @@ export default class Step2 extends React.Component {
     }
 
     componentWillUnmount = () => {
-        const work = {
-            type: {
-                employment: this.state.employment,
-                contractWork: this.state.contractWork,
-                contractComission: this.state.contractComission,
-                b2b: this.state.b2b,
-            },
-            place: {
-                stacionary: this.state.stacionary,
-                remote: this.state.remote
+        const workObj = {
+            work: {
+                type: {
+                    employment: this.state.employment,
+                    contractWork: this.state.contractWork,
+                    contractComission: this.state.contractComission,
+                    b2b: this.state.b2b,
+                },
+                place: {
+                    stacionary: this.state.stacionary,
+                    remote: this.state.remote
+                }
             }
         };
 
-        this.props.userProfileUpdate(work);
+        this.props.userProfileUpdate(workObj);
         Animated.timing(
             this.state.fadeAnim,
             {

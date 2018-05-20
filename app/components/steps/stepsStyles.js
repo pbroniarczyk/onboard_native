@@ -25,4 +25,36 @@ export const styles = StyleSheet.create({
 	input: {
 		width: 300
 	},
+
+	// Step3 - career paths
+	path: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center",
+		padding: 15,
+		marginBottom: 10,
+		borderWidth: 1,
+		borderColor: "#e5e5e5"
+	},
+		
+	path__title: {
+		display: "flex",
+	},
+
+	path__title_checked: {
+		display: "flex",
+		color: "#0388d1",
+	},
+
+	path__checked: {
+		display: "flex",
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center",
+		padding: 15,
+		marginBottom: 10,
+		borderWidth: 1,
+		borderColor: "#0388d1",
+	}
 });
